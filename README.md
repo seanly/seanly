@@ -1,16 +1,24 @@
 <h1 align="center">Hi 👋，我是 永胜</h1>
-<h3 align="center">SRE · 可靠性与平台工程 | <a href="https://github.com/seanly/dmr">DMR</a> 作者 | 开源与插件生态</h3>
+<h3 align="center">SRE · 可靠性与平台工程 | DMR 作者 | 开源工具套件 <a href="https://github.com/seanly/dmr-devkit">dmr-devkit</a></h3>
 
 <p align="left">
   <img src="https://komarev.com/ghpvc/?username=seanly&label=Profile%20views&color=0e75b6&style=flat" alt="seanly" />
 </p>
 
-### DMR（Decide, Monitor, Review）
+### DMR（Direct, Mediate, Regulate）
 
-我是 **[DMR](https://github.com/seanly/dmr)** 的创造者：一个用 Go 编写的、**插件优先**的 AI Agent 框架，强调 **Tape** 可审计、**OPA** 策略治理与人机审批。  
+我是 **DMR** 的创造者：一个用 Go 编写的、**插件优先**的 AI Agent 框架，采用 [Tape-First](https://tape.systems/) 设计，强调 **Tape** 可审计、**OPA** 策略治理与人机审批。  
 > *In dmr we trust, but verify.*
 
-另见 **dmr-plugin-*** 等扩展，把工具、策略与审批都做成可插拔能力，和我在交付链路上做平台化、自动化的思路是一致的。
+DMR 的核心理念是：
+
+- **Direct**：人设定目标与约束，指导 AI 执行。
+- **Mediate**：AI 编排工具调用、管理上下文、协调多步工作流。
+- **Regulate**：人通过 OPA 策略、审批与审计进行监管与纠错。
+
+当前 DMR 已覆盖的关键能力包括：插件化架构、OPA 策略引擎、交互式审批、`allow_rules` 预授权、Tape 审计与上下文、多模型兼容、上下文成本管控、配置加密、终端 Markdown 渲染、A2A 协议、Learner 自学习、Memory 知识库、ShellGuard 命令安全分析、跨设备同步、DevKit 嵌入、OS 服务管理、OAuth2 客户端凭证、CWD 工作目录管理等。
+
+DMR 本身为闭源产品，配套的开发工具套件 **dmr-devkit** 已开源在 <a href="https://github.com/seanly/dmr-devkit">github.com/seanly/dmr-devkit</a>，提供 Agent、Tape、Tool、Workflow、A2A Server、DevKit、Auth、CWD、Logging 等可嵌入能力，和我在交付链路上做平台化、自动化的思路是一致的。
 
 ### 对 AI 的看法（个人）
 
@@ -20,7 +28,7 @@
 ---
 
 - 🔭 **SRE 视角**：关注稳定性、变更风险、自动化与可观测；把重复劳动沉淀成平台能力与流水线
-- 🛠️ **技术栈**：熟悉 **Go**、Python、Java；活跃于 **Kubernetes** 与交付/安全工具链；主打开源方向见下方 **DMR** 与插件生态
+- 🛠️ **技术栈**：熟悉 **Go**、Python、Java；活跃于 **Kubernetes** 与交付/安全工具链；主打开源方向见下方 **dmr-devkit**
 - 🌱 持续补齐前端、AI 工程化与 DevOps 相关实践，让「跑得快」和「跑得稳」能同时成立
 - 🚀 维护并参与多个开源项目，欢迎访问我的 [GitHub 仓库](https://github.com/seanly?tab=repositories)
 - 💬 欢迎交流 **SRE / 平台与自动化**、**插件与策略化 Agent**、云原生与 AI 工程
@@ -28,40 +36,9 @@
 
 ---
 
-<h3 align="left">🚀 开源项目（DMR 与插件）</h3>
+<h3 align="left">🚀 开源项目</h3>
 
-<p align="left">
-  <a href="https://github.com/seanly/dmr" target="_blank">
-    <img src="https://img.shields.io/badge/DMR-Core-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="DMR" />
-  </a>
-  <a href="https://github.com/seanly/dmr-plugin-cron" target="_blank">
-    <img src="https://img.shields.io/badge/dmr--plugin--cron-Schedule-326CE5?style=for-the-badge" alt="dmr-plugin-cron" />
-  </a>
-  <a href="https://github.com/seanly/dmr-plugin-feishu" target="_blank">
-    <img src="https://img.shields.io/badge/dmr--plugin--feishu-Feishu-3370FF?style=for-the-badge" alt="dmr-plugin-feishu" />
-  </a>
-  <a href="https://github.com/seanly/dmr-plugin-gitlab" target="_blank">
-    <img src="https://img.shields.io/badge/dmr--plugin--gitlab-GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white" alt="dmr-plugin-gitlab" />
-  </a>
-  <a href="https://github.com/seanly/dmr-plugin-web" target="_blank">
-    <img src="https://img.shields.io/badge/dmr--plugin--web-Web-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="dmr-plugin-web" />
-  </a>
-  <a href="https://github.com/seanly/dmr-plugin-weixin" target="_blank">
-    <img src="https://img.shields.io/badge/dmr--plugin--weixin-Weixin-07C160?style=for-the-badge" alt="dmr-plugin-weixin" />
-  </a>
-</p>
-
-**DMR** — [Decide, Monitor, Review](https://github.com/seanly/dmr)：Go 编写的插件化 AI Agent 框架；Tape 审计、OPA 策略、交互式审批；OpenAI 兼容多模型。
-
-**dmr-plugin-cron** — 定时外部插件：从存储加载任务，在 `dmr serve` 下按调度触发 `RunAgent`（无内联 jobs YAML）。
-
-**dmr-plugin-feishu** — 飞书/Lark 私聊接入：消息驱动 Agent，审批与 Tape 联动，回复可走线程或会话。
-
-**dmr-plugin-gitlab** — 接收 GitLab Merge Request Webhook，走 Agent 做代码审查，结果以评论与行内 discussion 回写。
-
-**dmr-plugin-web** — 浏览器侧审批（SSE）与 AI 对话，反向 RPC 接入 DMR Agent；React 前端 `go:embed` 单二进制。
-
-**dmr-plugin-weixin** — 微信 ilink/bot 网关接入：长轮询收消息、`RunAgent` 回复，可实现 `ProvideApprover` 与 OPA 审批流。
+**dmr-devkit** — [github.com/seanly/dmr-devkit](https://github.com/seanly/dmr-devkit)：DMR 的开发工具套件，提供 Agent、Client、Core、Tape、Tool、Workflow、A2A Server、DevKit、Auth、CWD、Logging 等可嵌入能力，用于构建插件化、可审计、策略治理的 AI Agent 应用。
 
 ---
 
